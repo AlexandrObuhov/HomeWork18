@@ -1,0 +1,54 @@
+.features{
+  @include laptop (){
+    &__block{
+      flex-wrap: wrap;
+      row-gap: 70px;
+      column-gap: 0;
+      & .features__wrapper{
+        width: 50%;
+      }
+      &:after{
+        display: none;
+      }
+      &:before{
+        display: none;
+      }
+    }
+    .third {
+      &:before{
+        display: none;
+      }
+    }
+    &__wrapper{
+      width: 50%;
+    }
+  }
+  @include tablet(){
+    &{
+      padding: 90px 0;
+    }
+  }
+  @include mobile-small(){
+    &__block{
+      row-gap: 25px;
+      & .features__wrapper{
+        width: 100%;
+      }
+    }
+    &__cta{
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      max-width: 282px;
+    }
+    a.btn.btn-secondary {
+      width: 100%;
+    }
+    a.btn.btn-primary{
+      width: 100%;
+    }
+    &__before-after{
+      display: none;
+    }
+  }
+}

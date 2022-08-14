@@ -1,0 +1,102 @@
+.features {
+  background-image: url('../assets/img/features.svg');
+  @extend %default-bg-img;
+  background-position: center center;
+  padding: 140px 0;
+  border-bottom: $section-border-bottom;
+
+  &__content{
+    gap:92px;
+    h6 {
+      @extend %h6;
+      margin-bottom: 20px;
+    }
+    h3{
+      @include title(24px, 30px)
+    }
+  }
+
+  &__block {
+    gap: 67px;
+    max-width: 761px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    &:after {
+      @include feature-before-after(55%, 28px);
+      left: 48%;
+    }
+    &:before {
+      @include feature-before-after(55%, 28px);
+      left: 21%;
+    }
+
+    img {
+      width: 69px;
+      height: 69px;
+    }
+    h5 {
+      @extend %h5;
+    }
+    p {
+      @extend %features-description;
+      max-width: 250px;
+      width: 100%;
+      margin: $margin-center;
+    }
+
+    & .features__wrapper {
+      width: 25%;
+      align-items: center;
+      gap: 4px;
+    }
+    .third{
+      position: relative;
+      &:before{
+        @include feature-before-after(55%, 28px);
+        right: -36%;
+      }
+    }
+  }
+
+  &__cta {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 337px;
+
+    .btn-secondary {
+      @extend %features-btn;
+    }
+    .btn-primary {
+      @extend %features-btn;
+    }
+  }
+
+  &__or {
+    @extend %font-open-sans-semiBold;
+    color: map-get($colors, feature-color-text);
+    font-size: map-get($font_sizes, font-size_xs);
+    line-height: 19px;
+    position: absolute;
+    top: 33%;
+    left: 47%;
+  }
+
+  &__before-after {
+    width: calc(100% / 3);
+
+    &:before {
+      @include feature-before-after(50%, 15px);
+      left: 58%;
+    }
+
+    &:after {
+      @include feature-before-after(50%, 15px);
+      right: 58%;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,133 @@
+body{
+  @extend %description;
+}
+.container{
+  max-width: map-get($breakpoints, xxl);
+  width: 100%;
+  padding: 0 $horizontal-offset;
+  margin: 0 auto;
+}
+main {
+  margin-top: $header-height;
+}
+.row{
+  display: flex;
+}
+.list-unstyled{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link-unstyled{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+.align-items-center{
+  align-items: center;
+}
+.d-flex{
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end{
+  justify-content: flex-end;
+}
+.direction-column {
+  flex-direction: column;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.text-center {
+  text-align: center;
+}
+h6{
+  margin: 0;
+}
+
+.btn {
+  @extend .link-unstyled;
+  @extend %font-quicksand-bold;
+  padding: 13px 16px;
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 16px;
+
+  &:hover {
+    transition: .3s;
+  }
+
+
+  &.btn-primary {
+    background-color: #D2E1FF;
+    color: #3A79FF;
+
+
+    &:hover {
+     @extend %btn-hover;
+    }
+
+    &:active {
+      @extend %btn-active;
+    }
+  }
+
+
+  &.btn-secondary{
+    background-color: #FFD7D7;
+    color: #D43F3F;
+    &:hover {
+      @extend %btn-hover;
+    }
+    &:active {
+      @extend %btn-active;
+    }
+  }
+
+  &.btn-sm{
+    padding: 10px 20px;
+  }
+}
+.dots {
+  @extend %dots;
+}
+
+.dot {
+  @extend %dot;
+  &-active {
+    background-color: #5283FF;
+  }
+}
+
+@media (max-width:map-get($breakpoints, xxl)) {
+  .container{
+    max-width:map-get($breakpoints, lg);
+  }
+}
+@media (max-width:map-get($breakpoints, lg)) {
+  .container{
+    max-width:map-get($breakpoints, md);
+  }
+}
+@media (max-width:map-get($breakpoints, md)) {
+  .container{
+    max-width:map-get($breakpoints, sm);
+  }
+}
+@media (max-width:map-get($breakpoints, sm)){
+  .container{
+    max-width:map-get($breakpoints, xs);
+  }
+}
+@media (max-width:map-get($breakpoints, xs)){
+  .container{
+    max-width:map-get($breakpoints, xxs);
+  }
+}
+

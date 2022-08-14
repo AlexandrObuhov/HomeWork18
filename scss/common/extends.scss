@@ -1,0 +1,206 @@
+%font-roboto{
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+%font-roboto-normal{
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+}
+%font-quicksand-medium{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+%font-quicksand-bold{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+%font-quicksand-regular{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+}
+%font-quicksand-light{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+%font-open-sans-bold{
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+%font-open-sans-semiBold{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+
+%btn-hover{
+  background-color: #333;
+  color: map-get($colors, color-white);
+  transition: $transition;
+}
+%btn-active{
+  background-color: map-get($colors, color-btn-active);
+  color: map-get($colors, color-white);
+  transition: $transition;
+}
+
+
+%foter-header-text{
+  @extend %font-quicksand-medium;
+  font-size: 12px;
+  line-height: 15px;
+  color:map-get($colors, text-color);
+}
+%h6{
+  @extend %font-roboto;
+  text-transform: uppercase;
+  font-size: map-get($font_sizes, font-size_xxs);
+  color: map-get($colors, main-text-color);
+  line-height: 12px;
+  letter-spacing: 0.1em;
+}
+
+%title{
+  @extend %font-quicksand-medium;
+  color: map-get($colors, main-text-color);
+}
+
+%description {
+  @extend %font-roboto-normal;
+  color: map-get($colors, main-font-color);
+  line-height: 29px;
+  letter-spacing: $letter-spacing;
+  font-size: 15px;
+}
+
+%description-font-size14{
+  @extend %font-roboto-normal;
+  font-size: map-get($font_sizes, font-sixe_x);
+  letter-spacing: $letter-spacing;
+}
+
+%background-img{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+%default-bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%hr{
+  display: inline-block;
+  background-color: #DAE4FE;
+  border: none;
+  width: 15px;
+  height: 2px;
+}
+
+%dots{
+  gap: 12px;
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+%dot {
+  width: 8px;
+  height: 8px;
+  background-color: #D1D6E3;
+  border-radius: 50%;
+}
+%h5{
+  @extend %font-open-sans-bold;
+  font-size: 14px;
+  line-height: 25px;
+  color: #4074F8;
+}
+%button{
+  @extend %font-quicksand-bold;
+  font-size: 13px;
+  line-height: 16px;
+  box-shadow: 0 5px 15px rgba(188, 199, 255, 0.75);
+  border: 1px solid;
+}
+%features-description{
+  @extend %font-open-sans-semiBold;
+  font-size: map-get($font_sizes, font-size_xs);
+  line-height: 19px;
+  text-align: center;
+  color: map-get($colors, feature-color-text);
+}
+%features-btn{
+  width: calc(100% / 3);
+  @extend %font-quicksand-bold;
+  line-height: 16px;
+}
+
+%before-after{
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+%feature-before-after{
+  @extend %before-after;
+  height: 1px;
+  background-color: map-get($colors, bg-color-hr);
+}
+%stats-description{
+  @extend %font-quicksand-medium;
+  font-size: map-get($font_sizes, font-size_md);
+  line-height: 23px;
+  letter-spacing: $letter-spacing;
+}
+%stats-number{
+  @extend %font-quicksand-regular;
+  font-size: map-get($font_sizes, font-size_xlg);
+  line-height: 83px;
+  letter-spacing: $letter-spacing;
+}
+%cursor_glass{
+  width: 65px;
+  height: 65px;
+  background-color: map-get($colors, color-white);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+%blog-arrow{
+  top: 50%;
+  width: 23px;
+  height: 15px;
+  position: absolute;
+}
+%blog-img-hover{
+  opacity: 1;
+  transition: $transition;
+}
+
+%started-button-left{
+  color: #565F82;
+  background: map-get($colors, color-white);
+  box-shadow: 0 5px 15px #6480E8;
+  border: 1px solid map-get($colors, color-white);
+}
+%started-button-right{
+  color: #C7D3FF;
+  border: 1px solid #A0B4FF;
+  background-color: #6888FF;
+}
+%started-btn-active{
+  background-color: map-get($colors, color-btn-active);
+  color: map-get($colors, color-white);
+  transition: $transition;
+  border: 1px solid map-get($colors, color-btn-active);
+}
+
+%newsletter-btn{
+  @extend %font-quicksand-bold;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+

@@ -1,0 +1,31 @@
+.customers{
+  @include larger_screen(){
+    &{
+      padding: 50px 50px;
+    }
+    &__content{
+      gap:40px;
+      margin: 0;
+    }
+  }
+
+  @include laptop(){
+    &{
+      padding: 50px 0;
+    }
+    &__content{
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-around;
+      svg{
+        width: calc(100% / 4);
+      }
+    }
+  }
+
+  @include mobile(){
+    svg{
+      width: calc(100% / 3);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@mixin a-style($prop-name, $default-state, $hover-state, $active-state ) {
+
+  @if($prop-name == 'bg') {
+    background-color: $default-state;
+  } @else {
+    color: $default-state;
+  }
+
+  &:hover {
+    @if($prop-name == 'bg') {
+      background-color: $hover-state;
+    } @else {
+      color: $hover-state;
+    }
+    transition: $transition;
+  }
+
+  &:active {
+    @if($prop-name == 'bg') {
+      background-color: $active-state;
+    } @else {
+      color: $active-state;
+    }
+    transition: $transition;
+  }
+}
+
+@mixin plan-btn($color, $bg-color, $border-color ){
+  @extend %button;
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $color;
+    background-color: $bg-color;
+    border-color: $border-color ;
+  }
+  &:active {
+    color: $color;
+    background-color: $bg-color;
+  }
+}
+
+@mixin title( $font_size, $line-height){
+  @extend %title;
+  font-size: $font_size;
+  line-height: $line-height;
+}
+
+@mixin feature-before-after($top, $width){
+  @extend %feature-before-after;
+  top: $top;
+  width: $width;
+}
+
+@mixin description-font-size14($line-height, $color){
+  @extend %description-font-size14;
+  color: $color;
+  line-height: $line-height;
+}

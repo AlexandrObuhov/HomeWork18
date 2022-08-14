@@ -1,0 +1,91 @@
+.header {
+  @include tablet(min){
+    label {
+      display: none;
+    }
+  }
+  @include mobile(min){
+    .visible-xs {
+      display: none;
+    }
+  }
+
+  @include larger_screen(){
+    &__main-menu {
+      ul {
+        gap: 25px;
+      }
+    }
+  }
+  @include desktop(){
+    &__menu {
+      gap: 10px;
+    }
+  }
+  @include laptop(){
+    &__main-menu ul {
+      gap: 15px;
+    }
+    &__social {
+      gap: 19px;
+    }
+
+  }
+
+  @include tablet(){
+    &__wrapper{
+      position: relative;
+    }
+    &__menu{
+      justify-content: initial;
+    }
+    label{
+      margin-left: 10px;
+    }
+    &__col{
+      width:initial;
+    }
+
+    &__dropdowm{
+      display: none!important;
+    }
+    &__main-menu ul li .d-none{
+      display: none;
+    }
+
+    &__main-menu{
+      [type="checkbox"]:checked + ul{
+        display: block;
+      }
+      ul{
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        background-color: map-get($colors, sub_menu_bg);
+      }
+      li{
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      a{
+        color: map-get($colors, accent-color);
+        font-size: map-get($font_sizes, font_size_md);
+      }
+    }
+  }
+
+  @include mobile(){
+    &{
+      padding-top: 22px;
+    }
+    &__cta{
+      display: none;
+    }
+    .visible-xs{
+      display: list-item;
+    }
+  }
+}

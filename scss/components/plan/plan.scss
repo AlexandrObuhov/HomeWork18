@@ -1,0 +1,72 @@
+.plan{
+
+  $plan-btn-bg-color:#4C85FF;
+  $plan-bg-color-btn: #ADB4D2;
+
+  background-color: map-get($colors, section-bg-color);
+  padding-top: 170px;
+  border-bottom: $section-border-bottom;
+
+  &__info{
+    margin-left: 180px;
+    width: 50%;
+    gap: 47px;
+
+    & .plan__text-centre{
+      gap: 20px;
+    }
+    h6 {
+      @extend %h6;
+    }
+    h2{
+      @include title(map-get($font_sizes, font-size_lg), 45px)
+    }
+    span {
+      @extend %font-quicksand-regular;
+    }
+    p {
+      @extend %description;
+    }
+  }
+  & .plan__button {
+    & .plan__button-video{
+      @include plan-btn(map-get($colors, color-white), $plan-btn-bg-color, $plan-btn-bg-color);
+      position: relative;
+      padding: 12px 28px;
+      border-radius: 2px;
+      &:hover {
+        color: $plan-bg-color-btn;
+        background-color: map-get($colors, color-white);
+        border-color: #D1D1E4 ;
+      }
+      &:active {
+        color: map-get($colors, color-white);
+        background-color: map-get($colors, color-btn-active);
+        border-color: #D1D1E4 ;
+      }
+    }
+    & .plan__button-see{
+      @include plan-btn($plan-bg-color-btn, map-get($colors, color-white), #D1D1E4);
+      padding: 12px 22px;
+      border-radius: 2px;
+      &:hover {
+        color: map-get($colors, color-white);
+        background-color: $plan-btn-bg-color;
+        border-color: $plan-btn-bg-color;
+      }
+      &:active {
+        color: map-get($colors, color-white);
+        background-color: map-get($colors, color-btn-active);
+        border-color: #D1D1E4 ;
+      }
+    }
+    & img{
+      position: absolute;
+      transform: translate( 80px, -10px);
+    }
+  }
+
+&__illustration{
+  margin-right: -65px;
+}
+}

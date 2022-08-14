@@ -1,0 +1,88 @@
+.header {
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  top:0;
+  background-color: map-get($colors, color-white);
+  border-bottom: $section-border-bottom;
+  min-height: $header-height;
+
+  &__wrapper{
+    padding: 18px 0;
+  }
+
+  [type="checkbox"] {
+    display: none;
+  }
+
+  &__col{
+    width:50%;
+  }
+
+  &__menu{
+    justify-content: space-between;
+  }
+  &__logo {
+    a {
+      @include a-style('bg', map-get($colors, accent-color), black, map-get($colors, color-btn-active));
+      text-decoration: none;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+    }
+  }
+
+  &__main-menu{
+
+    ul{
+      column-gap: 42px;
+
+      li{
+        position: relative;
+
+        &:hover{
+          ul{
+            display: block;
+          }
+        }
+      }
+    }
+    a {
+      @include a-style('color', map-get($colors, text-color), map-get($colors, accent-color), map-get($colors, color-btn-active));
+      text-decoration: none;
+    }
+  }
+
+  &__dropdown{
+    position: absolute;
+    background-color: #444444;
+    display: none;
+
+    li{
+      padding: 10px;
+    }
+  }
+  &__social{
+    justify-content: flex-end;
+    gap: 44px;
+
+    ul{
+      gap: 34px;
+    }
+  }
+  & path:hover{
+    transition: $transition;
+    fill: #6188FF;
+  }
+  & path:active{
+    transition: $transition;
+    fill: map-get($colors, color-btn-active);
+  }
+
+  &__cta{
+    margin: 19px 0 18px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    @extend %font-quicksand-bold;
+  }
+}
